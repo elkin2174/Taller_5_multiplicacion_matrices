@@ -1,20 +1,18 @@
-import Matrices._
+import Matrices.*
 
-val matriz = Vector(Vector(0, 2, 2), Vector(2, 2, 0), Vector(0, 2, 2))
-val matriz2 = Vector(Vector(1, 1, 1), Vector(1, 0, 1), Vector(2, 0, 2))
 
-val matriz44 = matrizAlAzar(6,8)
-val matriz442 = matrizAlAzar(6,2)
+val matriz = matrizAlAzar(8,2)
+val matriz2 = matrizAlAzar(8,2)
+
+val matriz1 = Vector(Vector(1,2),Vector(1,0))
+val matriz11 = Vector(Vector(1,0),Vector(1,1))
 
 
 
 multMatriz(matriz, matriz2)
 multMatrizPar(matriz,matriz2)
-multMatrizPar(matriz44,matriz442)
-multMatriz(matriz44, matriz442)
+multMatrizRec(matriz,matriz2)
 
-subMatriz(matriz44, 2, 2 , matriz44.length/2)
-sumMatriz(matriz,matriz2)
 
 
 
