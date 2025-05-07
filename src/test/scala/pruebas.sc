@@ -16,9 +16,8 @@ for{
   m1 = matrizAlAzar(math.pow(2,i).toInt,2)
   m2 = matrizAlAzar(math.pow(2,i).toInt,2)
 } yield (compararAlgoritmos(multStrassen,multStrassenPar)(m1,m2),math.pow(2,i).toInt)
-compararProdPunto(100)
 /*
-//Ejecucion completa, puede tardar demasiado.
+//Ejecucion completa, puede tardar demasiado. Descomentar para prueba completa.
 for{
   i <- 1 to 10
   m1 = matrizAlAzar(math.pow(2,i).toInt,2)
@@ -35,8 +34,12 @@ for{
   m2 = matrizAlAzar(math.pow(2,i).toInt,2)
 } yield (compararAlgoritmos(multStrassen,multStrassenPar)(m1,m2),math.pow(2,i).toInt)
 */
+// Ejecucion comparativa de parelizacion de datos
+for {
+  i <- 1 to 1000 by 100
+} yield (compararProdPunto(i), i)
 
-
+//Ejecucion de prueba de las demas funciones.
 val m1A = matrizAlAzar(math.pow(2,1).toInt,2)
 val m2A = matrizAlAzar(math.pow(2,2).toInt,2)
 val m3A = matrizAlAzar(math.pow(2,6).toInt,2)
