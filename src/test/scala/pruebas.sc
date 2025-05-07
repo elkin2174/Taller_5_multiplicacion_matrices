@@ -1,21 +1,21 @@
 import Matrices._
 import Benchmark._
 //Ejecucion reducida para una ejecucion mas liviana
-for{
-  i <- 1 to 8
-  m1 = matrizAlAzar(math.pow(2,i).toInt,2)
-  m2 = matrizAlAzar(math.pow(2,i).toInt,2)
-} yield (compararAlgoritmos(multMatriz,multMatrizPar)(m1,m2),math.pow(2,i).toInt)
-for{
-  i <- 1 to 8
-  m1 = matrizAlAzar(math.pow(2,i).toInt,2)
-  m2 = matrizAlAzar(math.pow(2,i).toInt,2)
-} yield (compararAlgoritmos(multMatrizRec,multMatrizRecPar)(m1,m2),math.pow(2,i).toInt)
-for{
-  i <- 1 to 8
-  m1 = matrizAlAzar(math.pow(2,i).toInt,2)
-  m2 = matrizAlAzar(math.pow(2,i).toInt,2)
-} yield (compararAlgoritmos(multStrassen,multStrassenPar)(m1,m2),math.pow(2,i).toInt)
+//for{
+//  i <- 1 to 8
+//  m1 = matrizAlAzar(math.pow(2,i).toInt,2)
+//  m2 = matrizAlAzar(math.pow(2,i).toInt,2)
+//} yield (compararAlgoritmos(multMatriz,multMatrizPar)(m1,m2),math.pow(2,i).toInt)
+//for{
+//  i <- 1 to 8
+//  m1 = matrizAlAzar(math.pow(2,i).toInt,2)
+//  m2 = matrizAlAzar(math.pow(2,i).toInt,2)
+//} yield (compararAlgoritmos(multMatrizRec,multMatrizRecPar)(m1,m2),math.pow(2,i).toInt)
+//for{
+//  i <- 1 to 8
+//  m1 = matrizAlAzar(math.pow(2,i).toInt,2)
+//  m2 = matrizAlAzar(math.pow(2,i).toInt,2)
+//} yield (compararAlgoritmos(multStrassen,multStrassenPar)(m1,m2),math.pow(2,i).toInt)
 /*
 //Ejecucion completa, puede tardar demasiado. Descomentar para prueba completa.
 for{
@@ -35,9 +35,7 @@ for{
 } yield (compararAlgoritmos(multStrassen,multStrassenPar)(m1,m2),math.pow(2,i).toInt)
 */
 // Ejecucion comparativa de parelizacion de datos
-for {
-  i <- 1 to 1001 by 100
-} yield (compararProdPunto(i), i)
+for (i <- 1 to 7) yield (compararProdPunto(math.pow(10,i).toInt), math.pow(10,i).toInt)
 
 //Ejecucion de prueba de las demas funciones.
 val m1A = matrizAlAzar(math.pow(2,1).toInt,2)
