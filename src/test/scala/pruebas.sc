@@ -36,7 +36,7 @@ for{
 */
 // Ejecucion comparativa de parelizacion de datos
 for {
-  i <- 1 to 1000 by 100
+  i <- 1 to 1001 by 100
 } yield (compararProdPunto(i), i)
 
 //Ejecucion de prueba de las demas funciones.
